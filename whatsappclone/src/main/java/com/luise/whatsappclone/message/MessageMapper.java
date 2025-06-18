@@ -1,5 +1,6 @@
 package com.luise.whatsappclone.message;
 
+import com.luise.whatsappclone.file.FileUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,6 +14,7 @@ public class MessageMapper {
                 .type(message.getType())
                 .state(message.getState())
                 .createdAt(message.getCreatedDate())
+                .media(FileUtils.readFileFromLocation(message.getMediaFilepath()))
                 .build();
     }
 }

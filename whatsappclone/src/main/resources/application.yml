@@ -26,6 +26,6 @@ spring:
 application:
   file:
     uploads:
-      media-output.path: ./uploads
+      media-output-path: ./uploads
 
 
